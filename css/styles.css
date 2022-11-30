@@ -194,8 +194,7 @@ nav {
 	padding: 16px 32px;
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background var(--animation), box-shadow var(--animation);
+	transition: background-color var(--animation), box-shadow var(--animation);
 }
 
 .hero {
@@ -339,6 +338,8 @@ nav {
 
 .footer-data {
 	display: flex;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .footer-list {
@@ -377,6 +378,7 @@ nav {
 .footer-ico {
 	background-color: var(--hover-color);
 	border-radius: 50%;
+	transition: background-color var(--animation);
 }
 
 .footer-list > li:hover {
@@ -427,10 +429,6 @@ nav {
 	color: var(--alternative-color);
 	background-color: var(--color-studio);
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.footer-data {
-	margin-left: 156px;
 }
 
 .footer-text {
@@ -560,7 +558,7 @@ nav {
 	margin-right: 0;
 }
 
-.partner > a {
+.a-partner {
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
 	color: #8e8f99;
@@ -569,26 +567,24 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.partner > a:hover,
-.partner > a:focus {
-	border-color: var(--color-studio);
-}
-
-.partner a:hover,
-.partner a:focus {
-	color: var(--color-studio);
+	transition: border-color var(--animation);
 }
 
 .svg-partner {
-	fill: currentColor;
+	fill: #8E8F99;
+	transition: fill var(--animation);
 }
 
-.svg-partner:focus,
-.svg-partner:hover {
+.a-partner:hover,
+.a-partner:focus {
+	border-color: var(--color-studio);
+}
+
+.a-partner:hover .svg-partner,
+.a-partner:focus .svg-partner {
 	fill: var(--color-studio);
 }
+
 
 .customers {
 	padding-top: 120px;
@@ -684,3 +680,43 @@ nav {
   background-color: var(--color-studio);
 }
 /* ============ACTIVE PAGE STUDIO============ */
+/* ============MODAL WINDOW============ */
+.data-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+
+
+	width: 1440px;;
+	height: 677px;
+	background: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+	width: 408px;
+	height: 576px;
+	background-color: #FCFCFC;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+
+}
+
+.close-button {
+	position: absolute;
+	right: 24px;
+	top: 24px;
+	
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #E7E9FC;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	 
+}
+/* ============MODAL WINDOW============ */
