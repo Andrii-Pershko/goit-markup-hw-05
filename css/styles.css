@@ -446,6 +446,8 @@ nav {
 	margin-bottom: 48px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 	width: 360px;
+
+  transition: box-shadow var(--animation)
 }
 
 .item-works:hover,
@@ -591,14 +593,14 @@ nav {
 	padding-right: 32px;
   overflow: auto;
   transform: translate(0, 100%);
-  transition: transform var(--animation);
+  transition: transform, color var(--animation);
 
 	
 
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
-  background-color: rgba(54, 0, 248, 0.5);
+  background-color: var(--color-studio);
 	color: var(--alternative-color);
 	letter-spacing: 0.02em;
 	position: absolute;
