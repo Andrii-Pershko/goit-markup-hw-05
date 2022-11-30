@@ -591,6 +591,7 @@ nav {
 	padding-right: 32px;
   overflow: auto;
   transform: translate(0, 100%);
+  transition: transform var(--animation);
 
 	
 
@@ -604,6 +605,7 @@ nav {
 }
 
 
-.item-works:hover .overlay {
+.item-works :hover .overlay,
+.link-focus:focus .overlay {
   transform: translate(0, 0);
 }
