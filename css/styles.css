@@ -2,7 +2,6 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	box-sizing: inherit;
 }
 
 :root {
@@ -12,6 +11,7 @@
 	--alternative-color: #f4f4fd;
 	--bacground-color-text: #ffffff;
 	--hover-color: #434455;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header {
@@ -443,10 +443,9 @@ nav {
 }
 
 .item-works {
-  position: relative;
 	margin-bottom: 48px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  width: 360px;
+	width: 360px;
 }
 
 .item-works:hover,
@@ -571,8 +570,9 @@ nav {
 }
 
 .img-p {
-	width: 360px;
 	position: relative;
+	width: 360px;
+  overflow: hidden;
 }
 
 .img-p img {
@@ -580,21 +580,30 @@ nav {
 }
 
 .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 40px;
-	background-color: rgba(54, 0, 248, 0.5);
-	color: var(--alternative-color);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 360px;
+	height: 300px;
+	margin: 0;
+	padding-top: 40px;
+	padding-left: 32px;
+	padding-right: 32px;
+  overflow: auto;
+  transform: translate(0, 100%);
+
+	
 
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
-
+  background-color: rgba(54, 0, 248, 0.5);
+	color: var(--alternative-color);
 	letter-spacing: 0.02em;
-  position: absolute;
+	position: absolute;
+}
+
+
+.item-works:hover .overlay {
+  transform: translate(0, 0);
 }
