@@ -681,16 +681,26 @@ nav {
 }
 /* ============ACTIVE PAGE STUDIO============ */
 /* ============MODAL WINDOW============ */
-.data-modal {
+.backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
 	display: flex;
 
-
-	width: 1440px;;
-	height: 677px;
+	width: 100%;;
+	height: 100%;
 	background: rgba(46, 47, 66, 0.4);
+
+	transition: visibility var(--animation), opacity var(--animation);
+
+}
+
+.backdrop.is-hidden{
+	visibility: 0;
+	opacity: 0;
+	pointer-events: none;
+
+	transition: visibility var(--animation), opacity var(--animation);
 }
 
 .modal {
@@ -711,6 +721,10 @@ nav {
 	right: 24px;
 	top: 24px;
 	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
@@ -719,4 +733,11 @@ nav {
 	cursor: pointer;
 	 
 }
+
+.close-button:hover,
+.close-button:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	
+}
+
 /* ============MODAL WINDOW============ */
