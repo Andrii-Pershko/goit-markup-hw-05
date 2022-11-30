@@ -443,8 +443,10 @@ nav {
 }
 
 .item-works {
+  position: relative;
 	margin-bottom: 48px;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  width: 360px;
 }
 
 .item-works:hover,
@@ -578,7 +580,15 @@ nav {
 }
 
 .overlay {
-	background-color: rgba(205, 92, 92, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+	background-color: rgba(54, 0, 248, 0.5);
 	color: var(--alternative-color);
 
 	font-weight: 400;
@@ -586,4 +596,5 @@ nav {
 	line-height: 1.5;
 
 	letter-spacing: 0.02em;
+  position: absolute;
 }
